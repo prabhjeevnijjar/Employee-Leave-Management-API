@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+</head>
+<body>
+    <nav>
+         <h1>Leave management</h1>
+    </nav>
+    <table>
+        <tr>
+            <th>Signup</th>
+            <th>Login</th>
+        </tr>
+        <tr>
+            <td>
+            <form action="/homepage/Signup" method="post">
+            <input type="text" name="eid" id="eid" placeholder="Employee Id">
+            <br>
+            <input type="text" name="name" placeholder="Name">
+            <br>
+            <input type="password" name="password" placeholder="Password">
+            <br>
+            <p>Select your role:</p>
+            <input type="radio" id="employee" name="role" value="Employee">
+            <label for="employee">employee</label>
+            <br>
+            <input type="radio" id="manager" name="role" value="Manager">
+            <label for="manager">manager</label>
+            <br>
+            <input type="radio" id="admin" name="role" value="Admin">
+            <label for="Admin">Admin</label>
+            <br>
+            <input type="submit" value="submit">
+            <br>
+            </form>
+            </td>
+       
+            <td>
+            <form action="/homepage/Login" method="post">
+            <input type="text" name="logineid" placeholder="Employee Id">
+            <br>
+            <input type="text" name="loginname" placeholder="Name">
+            <br>
+            <input type="password" name="loginpassword" placeholder="Password">
+            
+            <br>
+            <input type="submit" value="submit">
+            <br>
+            </form>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
