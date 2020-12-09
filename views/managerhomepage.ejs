@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="topnav">
+        <h1>Leave management</h1>
+        <h2>Manager homepage</h2>
+        <a href="#news">Review Leaves</a>
+      </div>
+      <table>
+        <thead>
+          <tr>
+          
+            <th>Name</th>
+            <th>Description</th>
+            <th>Startdate</th>
+            <th>Enddate</th>
+            <th>Previous leaves</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%if (records.length >0){ %>
+          <% records.forEach(function(row){ %>
+          <tr>
+            
+            <td><%= row.employeename %></td>
+            <td><%= row.description %></td>
+            <td><%= row.startdate %></td>
+            <td><%= row.enddate %></td>
+            <td><a href="/managerhomepage/previousLeaves/<%= row.id %>">Previous Leaves</a></td>       
+            <td>
+            <a href="/managerhomepage/approve/<%= row.id %>">Approve</a>
+              <a href="/managerhomepage/disapprove/<%= row.id %>">Disapprove</a>
+            </td>
+          </tr>
+          <% })}else{ %>
+            <tr>
+                <td colspan="6">No Record Found</td>
+                
+              </tr>
+            <% } %>
+        </tbody>
+      </table>
+
+    </body>
+    </html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="topnav">
+        <h1>Leave management</h1>
+        <a href="/employeeHomepage/myLeaves">My Leaves</a>
+      </div>
+      <h2>Welcome username</h2>
+      <p>Apply for a leave fill this form</p>
+      <form action="employeeHomepage/applyLeave" method="post">
+        <input type="text" name="leaveeid" placeholder="Employee Id">
+        <br>
+        <input type="text" name="employeename" placeholder="Employee Name">
+        <br>
+        <input type="text" name="description" placeholder="Leave Description Id">
+        <p>Start date</p>
+        <input type="date" name="startdate" id="">
+        <p>End Date</p>
+        <input type="date" name="enddate" id="">
+        <br>
+        <input type="submit" value="submit">
+        <br>
+        </form>
+</body>
+</html>
